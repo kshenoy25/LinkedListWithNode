@@ -4,6 +4,33 @@ import java.util.Scanner;
 
 class Runner{
     public static void main(String[] args) {
+
+        /////////////////////////////////////////////////////
+        // As per Question 7
+        // Add a main method that tests your methods using a linked list of Characters. Prompt for String input,
+        // then take the String apart and put it back together as a linked list.
+        String s;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        s = sc.nextLine();
+        System.out.println("You entered String :"+ s);
+
+        LinkedListWithNode strList = new LinkedListWithNode();
+
+        for (int i = 0; i < s.length(); i++){
+            //System.out.println(s.charAt(i));
+            strList.add(s.charAt(i));
+
+        }
+        System.out.println("Your converted string into linked list is: ");
+        System.out.println(strList);
+
+        LinkedListWithNode rStrList = strList.ListReverse();
+        System.out.println("Reverse the aarray!");
+        System.out.println(rStrList);
+
+        /////////////////////////////////////////////////
+        // Test cases for LinkedListWith Node Below
         LinkedListWithNode list = new LinkedListWithNode();
         String data;
         for (int x = 0; x < 8; x++) {
@@ -67,25 +94,9 @@ class Runner{
         System.out.println("Revised list:");
         System.out.println(list);
 
-        String s;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string");
-        s = sc.nextLine();
-        System.out.println("You entered String :"+ s);
 
-        LinkedListWithNode strList = new LinkedListWithNode();
 
-        for (int i = 0; i < s.length(); i++){
-            //System.out.println(s.charAt(i));
-            strList.add(s.charAt(i));
 
-        }
-        System.out.println("Your converted string into linked list is: ");
-        System.out.println(strList);
-
-        LinkedListWithNode rStrList = strList.ListReverse();
-        System.out.println("Reverse the aarray!");
-        System.out.println(rStrList);
 
     }
 }
